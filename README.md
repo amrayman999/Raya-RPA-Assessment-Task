@@ -221,9 +221,3 @@ Both Dispatcher and Performer use the following UiPath packages:
 | UiPath.UIAutomation.Activities| 25.10.16   |
 
 ---
-
-## 9. Workflow Whiteboard Images
-
-
-
----
