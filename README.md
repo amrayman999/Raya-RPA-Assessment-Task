@@ -27,7 +27,6 @@ All demonstration recordings and screenshots are located in the `Recordings` fol
 	<img src="Recordings/3.png" alt="Screenshot 3" width="350" />
 </p>
 
-> You can preview these files for a visual walkthrough of the automation process.
 
 ---
 
@@ -35,85 +34,131 @@ All demonstration recordings and screenshots are located in the `Recordings` fol
 
 ### Dispatcher Structure
 
-**Main Folders & Files:**
-
-| Folder/File | Description |
-|-------------|-------------|
-| ACMEWeb/ | Web automation workflows (login, navigation, extraction) |
-| Common/ | Shared components (Control, Email) |
-| Data/ | Config, input, output, and temp data |
-| Dispatcher/ | Dispatcher-specific workflows |
-| Documentation/ | Project documentation |
-| Exceptions_Screenshots/ | Screenshots on exceptions |
-| Framework/ | REFramework core workflows |
-| Tests/ | Test cases and templates |
-| Main.xaml | Main entry workflow |
-| project.json | Project metadata and dependencies |
-
-**ACMEWeb Navigation Table:**
-
-| Workflow | Purpose |
-|----------|---------|
-| ACMEWeb_ExtractWorkItems.xaml | Extracts work items from ACME web |
-| ACMEWeb_InitializeApp.xaml | Initializes the ACME web app |
-| ACMEWeb_Login.xaml | Handles login to ACME web |
-| ACMEWeb_NavigateWorkItems.xaml | Navigates to work items page |
-
-**Framework Components:**
-
-| Workflow | Purpose |
-|----------|---------|
-| CloseAllApplications.xaml | Closes all apps |
-| ExtractAndUploadQueueItems.xaml | Uploads items to Orchestrator queue |
-| InitAllApplications.xaml | Initializes all apps |
-| InitAllSettings.xaml | Loads config/settings |
-| KillAllProcesses.xaml | Kills processes |
-| RetryCurrentTransaction.xaml | Handles transaction retries |
-| SetTransactionStatus.xaml | Updates transaction status |
-| TakeScreenshot.xaml | Takes screenshots on error |
+```
+RAYA_UiPath_VerifyAccountPositions_Dispatcher/
+├── ACMEWeb/
+│   ├── ACMEWeb_ExtractWorkItems.xaml
+│   ├── ACMEWeb_InitializeApp.xaml
+│   ├── ACMEWeb_Login.xaml
+│   └── ACMEWeb_NavigateWorkItems.xaml
+├── Common/
+│   ├── Control/
+│   │   ├── Common_CheckAppCrash.xaml
+│   │   └── Common_CloseApp.xaml
+│   └── Email/
+│       └── Email_SendExceptionMail.xaml
+├── Data/
+│   ├── Config.xlsx
+│   ├── Input/
+│   │   ├── EmailTemplate.html
+│   │   └── placeholder.txt
+│   ├── Output/
+│   │   └── placeholder.txt
+│   └── Temp/
+│       └── placeholder.txt
+├── Dispatcher/
+│   └── Dispatcher_DispatchWorkItems.xaml
+├── Documentation/
+│   └── REFramework Documentation-EN.pdf
+├── Exceptions_Screenshots/
+│   ├── ExceptionScreenshot_251001.030834.png
+│   ├── ExceptionScreenshot_251001.044032.png
+│   ├── ExceptionScreenshot_251001.044711.png
+│   ├── ExceptionScreenshot_251001.110127.png
+│   ├── ExceptionScreenshot_251001.111102.png
+│   ├── ExceptionScreenshot_251001.124209.png
+│   ├── ExceptionScreenshot_251001.124932.png
+│   └── placeholder.txt
+├── Framework/
+│   ├── CloseAllApplications.xaml
+│   ├── ExtractAndUploadQueueItems.xaml
+│   ├── InitAllApplications.xaml
+│   ├── InitAllSettings.xaml
+│   ├── KillAllProcesses.xaml
+│   ├── RetryCurrentTransaction.xaml
+│   ├── SetTransactionStatus.xaml
+│   └── TakeScreenshot.xaml
+├── Tests/
+│   ├── InitAllApplicationsTestCase.xaml
+│   ├── InitAllSettingsTestCase.xaml
+│   ├── MainTestCase.xaml
+│   ├── ProcessTestCase.xaml
+│   ├── Tests.xlsx
+│   └── WorkflowTestCaseTemplate.xaml
+├── LICENSE
+├── Main.xaml
+├── Main.xaml.json
+├── project.json
+└── README.md
+```
 
 ### Performer Structure
 
-**Main Folders & Files:**
-
-| Folder/File | Description |
-|-------------|-------------|
-| ACMEDesktop/ | Desktop automation workflows (login, navigation, processing) |
-| ACMEWeb/ | Web automation for updating work items |
-| Common/ | Shared components (Control, Email) |
-| Data/ | Config, input, output, and temp data |
-| Documentation/ | Project documentation |
-| Email/ | Email notification workflows |
-| Exceptions_Screenshots/ | Screenshots on exceptions |
-| Framework/ | REFramework core workflows |
-| Tests/ | Test cases and templates |
-| Main.xaml | Main entry workflow |
-| project.json | Project metadata and dependencies |
-
-**ACMEDesktop Navigation Table:**
-
-| Workflow | Purpose |
-|----------|---------|
-| ACMEDesktop_InitializeApp.xaml | Initializes ACME desktop app |
-| ACMEDesktop_Login.xaml | Handles login to ACME desktop |
-| ACMEDesktop_NavigateToAccountTransactions.xaml | Navigates to account transactions |
-| ACMEDesktop_NavigateToClientAccounts.xaml | Navigates to client accounts |
-| ACMEDesktop_NavigateToClientDetails.xaml | Navigates to client details |
-| ACMEDesktop_NavigateToClientSearch.xaml | Navigates to client search |
-| ACMEDesktop_SumAccountTransactions.xaml | Sums account transactions |
-
-**ACMEWeb Navigation Table:**
-
-| Workflow | Purpose |
-|----------|---------|
-| ACMEWeb_ExtractWorkItemData.xaml | Extracts work item data |
-| ACMEWeb_InitializeApp.xaml | Initializes ACME web app |
-| ACMEWeb_Login.xaml | Handles login to ACME web |
-| ACMEWeb_NavigateToUpdateWorkItem.xaml | Navigates to update work item |
-| ACMEWeb_NavigateWorkItems.xaml | Navigates to work items page |
-| ACMEWeb_UpdateWorkItem.xaml | Updates work item status |
-
----
+```
+RAYA_UiPath_VerifyAccountPositions_Performer/
+├── ACMEDesktop/
+│   ├── ACMEDesktop_InitializeApp.xaml
+│   ├── ACMEDesktop_Login.xaml
+│   ├── ACMEDesktop_NavigateToAccountTransactions.xaml
+│   ├── ACMEDesktop_NavigateToClientAccounts.xaml
+│   ├── ACMEDesktop_NavigateToClientDetails.xaml
+│   ├── ACMEDesktop_NavigateToClientSearch.xaml
+│   ├── ACMEDesktop_SumAccountTransactions.xaml
+│   └── Control/
+│       └── ACMEDesktop_ControlTabs.xaml
+├── ACMEWeb/
+│   ├── ACMEWeb_ExtractWorkItemData.xaml
+│   ├── ACMEWeb_InitializeApp.xaml
+│   ├── ACMEWeb_Login.xaml
+│   ├── ACMEWeb_NavigateToUpdateWorkItem.xaml
+│   ├── ACMEWeb_NavigateWorkItems.xaml
+│   └── ACMEWeb_UpdateWorkItem.xaml
+├── Common/
+│   ├── Control/
+│   │   ├── Common_CheckAppCrash.xaml
+│   │   ├── Common_CloseApp.xaml
+│   │   └── Control_CheckAccountPosition.xaml
+│   └── Email/
+│       └── Email_SendExceptionMail.xaml
+├── Data/
+│   ├── Config.xlsx
+│   ├── Input/
+│   │   ├── EmailTemplate.html
+│   │   └── placeholder.txt
+│   ├── Output/
+│   │   └── placeholder.txt
+│   └── Temp/
+│       └── placeholder.txt
+├── Documentation/
+│   └── REFramework Documentation-EN.pdf
+├── Email/
+│   └── Email_SendExceptionMail.xaml
+├── Exceptions_Screenshots/
+│   └── placeholder.txt
+├── Framework/
+│   ├── CloseAllApplications.xaml
+│   ├── GetTransactionData.xaml
+│   ├── InitAllApplications.xaml
+│   ├── InitAllSettings.xaml
+│   ├── KillAllProcesses.xaml
+│   ├── Process.xaml
+│   ├── RetryCurrentTransaction.xaml
+│   ├── SetTransactionStatus.xaml
+│   └── TakeScreenshot.xaml
+├── Tests/
+│   ├── GetTransactionDataTestCase.xaml
+│   ├── InitAllApplicationsTestCase.xaml
+│   ├── InitAllSettingsTestCase.xaml
+│   ├── MainTestCase.xaml
+│   ├── ProcessTestCase.xaml
+│   ├── Tests.xlsx
+│   └── WorkflowTestCaseTemplate.xaml
+├── LICENSE
+├── Main.xaml
+├── Main.xaml.json
+├── project.json
+└── README.md
+```
 
 ## 4. Key Features & Functions
 
@@ -131,13 +176,19 @@ All demonstration recordings and screenshots are located in the `Recordings` fol
 
 Both projects use the following assets (to be configured in UiPath Orchestrator):
 
-| Asset Name            | Type         | Purpose                                 |
-|----------------------|--------------|-----------------------------------------|
-| ACME_Credentials     | Credential   | Login credentials for ACME systems      |
-| OrchestratorQueueName| Text/Queue   | Name of the queue for work items        |
-| Config.xlsx          | File         | Centralized configuration for workflows |
+| Asset Name                | Type        |
+|--------------------------|-------------|
+| ACME_Credential           | Credential  |
+| DataFolderPath            | Text        |
+| ExceptionMail_Reciever    | Text        |
+| ExceptionMail_Subject     | Text        |
+| Mail_PortNumber           | Text        |
+| Mail_Server               | Text        |
+| ScreenshotsFolderPath     | Text        |
+| SenderMail_Credential     | Credential  |
+| System1_URL               | Text        |
+| WI_Type                   | Text        |
 
-> _Add or update assets as needed for your environment._
 
 ---
 
@@ -173,6 +224,6 @@ Both Dispatcher and Performer use the following UiPath packages:
 
 ## 9. Workflow Whiteboard Images
 
-> _Add images of your workflow whiteboards for Dispatcher and Performer here._
+
 
 ---
