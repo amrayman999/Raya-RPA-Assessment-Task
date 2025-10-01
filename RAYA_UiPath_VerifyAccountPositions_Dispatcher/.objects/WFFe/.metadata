@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Use ACME Edge Browser",
+  "Type": "App",
+  "Id": "WFFen2w3sUS7hx-1_vM3eA",
+  "Reference": "jjPi4r2BNUCGquKcpXHelw/WFFen2w3sUS7hx-1_vM3eA",
+  "Created": "2025-09-30T13:25:52.6098822Z",
+  "Updated": "2025-09-30T13:25:52.6098822Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.16.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
